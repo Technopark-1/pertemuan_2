@@ -4,71 +4,291 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>navbar</title>
 </head>
 <style>
-    * {box-sizing: border-box}
-    h1 {color: red; font-family: sans-serif; }
-    .header {
-        background-color: #f1f1f1;
-        padding: 30px;
-        text-align: center;
-        
-
+    body {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        font-family: 'Roboto', sans-serif;
     }
 
-    .row {
-        display: -webkit-flex;
+    .navbar {
         display: flex;
+        /* text-align: center; */
+        /* background-color: #ddd; */
+        height: 85px;
+        padding: 0 10%;
+        align-items: center;
+        justify-content: space-between;
+        box-shadow: 0 2px 4px 0 rgba(1, 1, 1, 0.2);
     }
-    .column {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
-        padding: 10px;
-        height: 200px;
-        text-align: center;
-    
+
+    .navbar > h1 {
+        font-size: 29px;
+        font-weight: bolder;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 30px;
+        font-weight: 550;
     }
 </style>
 <body>
-    <div class="header">
-        <h1>
-            header
-        </h1>
-    </div>
-    
-    <div class="row">
-        <div class="column" style="background-color: #aaa;">Kolom 1 
+    <nav class="navbar">
+        <h1>Logo</h1>
+        <div class="nav-menu">
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+            <img src="instagram-fill 1.svg" alt="instagram">
+            <img src="twitter-fill 1.svg" alt="twitter-fill">
+            <img src="linkedin.svg" alt="linkedin-box-fill">
+            <!-- <ul>
+                <li><a href="?"></a>Home</li>
+                <li><a href="?"></a>About</li>
+                <li><a href="?"></a>Contact</li>
+            </ul> -->
+        </div>
+    </nav>
+
+    <style>
+        .hero-container {
+            display: flex;
+            background-color: #eee;
+
+            height: 470px;
+            padding: 0 10%;
+        }
+
+        .hero-container > div {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-container  h1 {
+            font-size: 60px;
+            width: 360px;
+            margin: 20px 0;
+            font-weight: bolder;
+        }
+
+        .hero-container p {
+            font-size: 30px;
+        }
+
+        .hero-container > img {
+            width: 50%;
+            height: 50%;
+            height: 323px;
+            align-self: center;
+        }
+    </style>
+    <section class="hero-container">
+        <div>
             <div>
-            <img src="fotoku.JPG" alt="" style="width: 70%;">
+                <h1>
+                    Make Better Cofee
+                </h1>
+                <p>
+                    Why Learn How To Make It?
+                </p>
+            </div>
+            
+        </div>
+        <img src="hero.svg" alt="hero">
+    </section>
+
+    <!-- Description Container -->
+    <style>
+        .root {
+            --dark-grey: #2D3748;
+            --grey: #4a5568;
+            --grayLight: #f7fafc;
+            --primary: #6b46c1;
+        }
+        .description-container {
+            /* background-color: aqua; */
+            height: 280px;
+            padding: 0 10%;
+            margin: 40px 0;
+            display: flex;
+        }
+
+        .description-container > div {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            box-shadow: 0px 4px 8px 0px rgba(1, 1, 1, 0.1);
+            border-top: 1px solid rgb(228, 228, 228);
+        }
+
+        .description-container h2 {
+            color: var(--dark-grey);
+        }
+
+        .description-container p {
+            margin: 5% 0;
+            color: var(--grey);
+        }
+
+        .description-container > div > div {
+            width: 350px;
+        }
+
+        .description-container > image {
+            width: 40%;
+            object-fit: cover;
+            /* height: 243px; */
+        }
+
+        .description-left-footer {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+    <section class="description-container">
+        <div>
+            <div>
+                <h2>long established</h2> 
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that....</p>
+            </div>
+            <div class="description-left-footer">
+                <p>May 20th 2020</p>
+                <p>Read more</p>
             </div>
         </div>
-        <div class="column" style="background-color: #bbb;">Kolom 2
-            <div>
-                <img src="fotoku.JPG" alt="" style="width: 70%;">
-                </div>
+        <img src="image1.png" alt="image1">
+    </section>
+
+    <!-- Content container -->
+    <style>
+        .content-container {
+            min-height: 400px;
+            margin: 40px 0;
+            padding: 0 10%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .content-container .card {
+            height: 100%;
+        }
+
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.1);
+            transform: 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px 0 rgba(1, 1, 1, 0.2);
+            cursor: pointer;
+        }
+
+        .card > img {
+            object-fit: fill;
+            height: 240px;
+            width: 100%;
+        }
+
+        .card > .card-body {
+            padding: 20px;
+        }
+
+        .card h3 {
+            font-size: 20px;
+            margin: 0 15px 0 0;
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 16px;
+        }
+
+        .card > .card-footer {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+    </style>
+    <section class="content-container">
+        <div class="card">
+            <img src="c1.png" alt="c1">
+            <div class="card-body">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est unde asperiores illo quidem tempore suscipit rem explicabo natus ab eum!</p>
+            </div>
+            <div class="card-footer">
+                <p>May 20th 2020</p>
+                <p>Read more</p>
+            </div>
         </div>
-        <div class="column" style="background-color: #ccc;">Kolom 3
-            <div>
-                <img src="fotoku.JPG" alt="" style="width: 70%;">
-                </div>
+        <div class="card">
+            <img src="c2.png" alt="c2">
+            <div class="card-body">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est unde asperiores illo quidem tempore suscipit rem explicabo natus ab eum!</p>
+            </div>
+            <div class="card-footer">
+                <p>May 20th 2020</p>
+                <p>Read more</p>
+            </div>
         </div>
-        <div class="column" style="background-color: #ddd;">Kolom 4
-            <div>
-                <img src="fotoku.JPG" alt="" style="width: 70%;">
-                </div>
+        <div class="card">
+            <img src="c3.png" alt="c3">
+            <div class="card-body">
+                <h3>Lorem, ipsum dolor.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est unde asperiores illo quidem tempore suscipit rem explicabo natus ab eum!</p>
+            </div>
+            <div class="card-footer">
+                <p>May 20th 2020</p>
+                <p>Read more</p>
+            </div>
         </div>
-        <div class="column" style="background-color: #ddd;">Kolom 4
+
+    </section>
+
+    <!-- What is Container -->
+    <style>
+        
+    </style>
+    <section class="what-is-container">
+        <div>
             <div>
-                <img src="fotoku.JPG" alt="" style="width: 70%;">
-                </div>
+                <h1>What is Lorem Ipsum?</h1>
+                <p>It is a long established fact that a reader will be distracted by the readable content of a page when
+                    looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal
+                    distribution...</p>
+            </div>
+            <div class="footer">
+                <p>May 20</p>
+                <p class="font-weight-bold">Read more</p>
+            </div>
         </div>
-    </div>
-    <div>
-        <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae, dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis at praesentium nobis est perspiciatis deleniti aliquid voluptatibus molestiae, eligendi nesciunt ipsum temporibus magni voluptates eos? Inventore officiis modi animi quisquam.
-        </p>
-    </div>
+        <img src="image2.png" alt="what-is">
+    </section>
+    <section class="button-container">
+        <button class="btn">See More Now</button>
+    </section>
+    <footer>
+        <p><b>hotcoffee</b> 2020 copyright all rights reserved</p>
+        <div>
+            <img src="instagram-fill 1.svg" alt="instagram">
+            <img src="twitter-fill 1.svg" alt="twitter">
+            <img src="linkedin.svg" alt="linkedin">
+        </div>
+    </footer>
 </body>
 </html>
